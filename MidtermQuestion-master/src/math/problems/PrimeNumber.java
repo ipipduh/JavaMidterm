@@ -13,6 +13,27 @@ public class PrimeNumber {
          *
          */
 
+        long sum = 0;
+        for (int i = 2; i < 2000000; i++) {
+            if (isPrime(i)) {
+                sum += i;
+            }
+        }
+        System.out.println(" The Number: " + sum + " \"Is Prime\"");
+    }
+    // check if a number is prime
+    private static boolean isPrime(int number) {
+        int sqrt = (int) Math.sqrt(number);
+        boolean isPrime = true;
+
+        // test up to square root of the number
+        for (int i = 2; i <= sqrt; i++) {
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        return isPrime;
     }
 
 }

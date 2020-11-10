@@ -1,5 +1,7 @@
 package math.problems;
 
+import java.util.Scanner;
+
 public class Pattern {
 
     public static void main(String[] args) {
@@ -9,5 +11,12 @@ public class Pattern {
          *
          */
 
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter num:");
+        int num = obj.nextInt();
+        for (int i = num; i >= 32 ; i -- )
+        {  System.out.print(i+",");
+            obj.close();
+        }
     }
 }
