@@ -7,7 +7,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -54,9 +53,18 @@ public class JsonReaderUtil {
                 JsonObject jsonobject = jsonArray.get(i).getAsJsonObject();
                 //you code start here
                 String empEmail = jsonobject.get("empEmail").toString();
-//                System.out.println(empEmail);
+           //     System.out.println(empEmail);
+
+                String employeeName = jsonobject.get("empName").toString();
+             //   System.out.println(employeeName);
+
                 String salary = jsonobject.get("salary").toString();
-                System.out.println(empEmail+"|" +salary);
+              //  System.out.println(empEmail+"|" +salary);
+
+                String department = jsonobject.get("department").toString();
+              //  System.out.println(department);
+
+                System.out.println(empEmail+" "+ employeeName+" "+salary+" "+department);
 
             } catch (Exception ex) {
 
